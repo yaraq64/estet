@@ -1,0 +1,63 @@
+.rooms {
+  position: relative;
+  &-slide {
+    width: 100%;
+    &-inner {
+      max-width: 1550px;
+      padding-right: 15px;
+      display: flex;
+    }
+    &-image {
+      flex-grow: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $brownDark;
+    }
+    &-content {
+      width: 535px;
+      flex-shrink: 0;
+      padding: 405px 0 120px 100px;
+      color: $brownDark;
+      font-family: $circe;
+    }
+    &-title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    &-text {
+      font-size: 15px;
+      line-height: 1.45;
+      p {
+        margin: 0 0 15px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &-title {
+    position: absolute;
+    top: 114px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    pointer-events: none;
+    &-inner {
+      display: flex;
+      justify-content: flex-end;
+      &-text {
+        max-width: 435px;
+        flex-grow: 1;
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        @include textDarkGradient;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px;
+  border-radius: 0;
+  background: none;
+  font-family: $circe;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  &--main {
+    margin-left: 45px;
+    padding: 24px 15px 24px 0;
+    border-color: rgba($brown, .32);
+    transition: background-color $duration, border-color $duration;
+    .btn-content {
+      @include textGradient;
+      position: relative;
+      letter-spacing: 0.5px;
+      left: -45px;
+      transition: left $duration;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 11px;
+      height: 17px;
+      background: url("../images/btn-main-arrow.png") no-repeat center;
+      position: relative;
+      left: -10px;
+      transition: transform $duration;
+    }
+    &:hover {
+      border-color: rgba($brown, .75);
+      .btn-content {
+        left: -35px;
+      }
+    }
+    &:active {
+      background-color: rgba($brown, .21);
+      &::after {
+        transform: translate3d(5px, 0, 0);
+      }
+    }
+  }
+  &--white {
+    @include textDarkGradient;
+    border: 0;
+    color: #0c0d22;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    .fas {
+      font-size: 110%;
+      margin-left: 26px;
+      position: relative;
+      top: -2px;
+      opacity: .9;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: #61514e;
+      transition: transform $duration, opacity $duration;
+    }
+    &:hover {
+      .fas {
+        opacity: 1;
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+    &:active {
+      .fas {
+        transform: translate3d(7px, 0, 0);
+      }
+    }
+  }
+}

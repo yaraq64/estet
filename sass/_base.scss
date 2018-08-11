@@ -1,0 +1,31 @@
+body {
+  font-family: $font_family;
+  font-size: $base_font_size;
+  line-height: 1.25;
+  color: $black;
+  font-weight: 500;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+button {
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+img {
+  vertical-align: middle;
+}

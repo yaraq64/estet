@@ -1,0 +1,51 @@
+.front {
+  &-slide {
+    width: 100%;
+    background-color: #fff;
+    background-position: right top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    padding: 120px 0 290px;
+    opacity: 0;
+    transition: opacity $duration*1.5;
+    &.is-selected {
+      opacity: 1;
+    }
+    &-content {
+      min-height: 265px;
+      max-width: 505px;
+    }
+    &-text {
+      @include textDarkGradient;
+      font-size: 28px;
+      line-height: 1.35;
+      margin-bottom: 44px;
+    }
+    &-link {
+      padding-left: 55px;
+    }
+  }
+  &-slider {
+    overflow: hidden;
+    .flickity {
+      &-page-dots {
+        bottom: 170px;
+        left: 40%;
+        @include sliderDots;
+      }
+      &-prev-next-button {
+        @include sliderArrows;
+        top: auto;
+        bottom: 160px;
+        margin: 0 0 -12px;
+        &.previous {
+          left: calc(((100% - #{$container_width}) / 2) + 80px);
+        }
+        &.next {
+          left: calc(((100% - #{$container_width}) / 2) + 175px);
+        }
+      }
+    }
+  }
+}

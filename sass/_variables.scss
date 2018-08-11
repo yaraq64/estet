@@ -1,0 +1,128 @@
+$font_family: 'Museo Cyrl';
+$circe: 'Circe';
+$base_font_size: 16px;
+$container_width: 1210px;
+$cols_padding: 15px;
+$white: #fff;
+$black: #000;
+$dark: #2b2e35;
+$red: #F44336;
+$green: #4CAF50;
+$yellow: #FF9800;
+$brown: #e2b784;
+$brownDark: #645350;
+$duration: 0.4s;
+$laptop: 1200px;
+$tablet: 992px;
+$phone: 767px;
+$mobile: 600px;
+@mixin gradient() {
+  background: linear-gradient(85deg, #eed8cd, #fed5a7);
+}
+@mixin darkGradient() {
+  background: linear-gradient(85deg, #8f7474, #554344);
+}
+@mixin textGradient() {
+  @include gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin textDarkGradient() {
+  @include darkGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin sliderDots() {
+  display: flex;
+  flex-wrap: wrap;
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #f2e6d1;
+    margin: 0 9px;
+    opacity: 1;
+    transition: transform $duration, background-color $duration;
+    &:hover {
+      transform: scale(1.5) perspective(1px);
+    }
+    &.is-selected {
+      background-color: $brownDark;
+      transform: none;
+    }
+  }
+}
+@mixin sliderArrows() {
+  width: 94px;
+  height: 50px;
+  padding: 0;
+  margin: -25px 0 0;
+  transform: none;
+  background-color: transparent;
+  transition: transform 0.4s;
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 2px;
+    background-color: $brownDark;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: left center;
+    transition: background-color 0.4s;
+  }
+  &::before {
+    margin-top: -1px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+  svg {
+    display: block;
+    width: 53px;
+    height: 3px;
+    top: 50%;
+    left: 1px;
+    margin-top: -2px;
+    background-color: $brownDark;
+    transition: width $duration, background-color $duration;
+  }
+  path {
+    display: none;
+  }
+  &:hover {
+    svg {
+      width: 92px;
+      background-color: $brown;
+    }
+    &::after,
+    &::before {
+      background-color: $brown;
+    }
+  }
+  &:active {
+    opacity: 1;
+  }
+  &.previous:active {
+    transform: translate3d(-3px, 0, 0);
+  }
+  &.next:active {
+    transform: translate3d(3px, 0, 0);
+  }
+  &.next {
+    &::after,
+    &::before {
+      left: auto;
+      right: 0;
+      transform-origin: right center;
+    }
+    svg {
+      left: auto;
+      right: 1px;
+    }
+  }
+}

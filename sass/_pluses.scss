@@ -1,0 +1,37 @@
+.pluses {
+  max-width: $container_width - 65px*2;
+  margin: 0 auto;
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -105px;
+    padding-top: 35px;
+  }
+  &-col {
+    width: 33.333%;
+    padding: 0 15px;
+    margin-bottom: 105px;
+  }
+  &-item {
+    max-width: 215px;
+    margin: 0 auto;
+    &-image {
+      margin-bottom: 45px;
+    }
+    &-title {
+      color: $dark;
+      font-family: $circe;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: bold;
+      padding-left: 8px;
+      letter-spacing: 0.5px;
+    }
+  }
+  &-col:nth-child(3n) &-item {
+    margin: 0 0 0 auto;
+  }
+  &-col:nth-child(3n + 1) &-item {
+    margin: 0 auto 0 0;
+  }
+}

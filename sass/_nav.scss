@@ -1,0 +1,35 @@
+.pagination {
+  padding: 20px 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: bold;
+      display: block;
+      padding: 7px 12px;
+      background-color: $black;
+      color: $white;
+      border-radius: 3px;
+      border: solid 2px $black;
+      &:hover {
+        border-color: $black;
+        background-color: $black;
+        color: $black;
+      }
+    }
+    &.active {
+      a {
+        border-color: $black;
+        background-color: $black;
+        color: $black;
+      }
+    }
+  }
+}

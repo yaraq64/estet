@@ -1,0 +1,30 @@
+.messages {
+  box-shadow: none;
+  border: 0;
+  color: $white;
+  margin: 0 0 15px;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 1.25;
+  a {
+    color: $white;
+    border-bottom: solid 1px rgba($white, .25);
+    transition: color $duration, border-color $duration;
+    &:hover {
+      color: $white;
+      border-color: $white;
+    }
+    &:active {
+      border-color: rgba($white, .5);
+    }
+  }
+  &--error {
+    background: $red;
+  }
+  &--status {
+    background: $green;
+  }
+  &--warning {
+    background: $yellow;
+  }
+}

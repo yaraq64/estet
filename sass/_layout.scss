@@ -1,0 +1,23 @@
+.container {
+  margin: 0 auto;
+  max-width: $container_width;
+  width: 100%;
+  padding: 0 $cols_padding;
+}
+.section {
+  color: #0c0d22;
+  padding: 100px 0;
+  &--dark {
+    background: url("../images/pattern-1.png") $dark repeat left top;
+    color: #fff;
+  }
+  &-title {
+    font-size: 54px;
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 0 0 55px;
+    &--center {
+      text-align: center;
+    }
+  }
+}

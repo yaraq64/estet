@@ -1,0 +1,39 @@
+.information-block {
+  padding: 162px 0 140px;
+  background: url("../images/information-block-bg.jpg") lighten($brown, 15%) no-repeat center;
+  background-size: cover;
+  color: #23262c;
+  &-inner {
+    display: flex;
+    padding-left: 60px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 3px;
+      background-color: #826b67;
+      position: absolute;
+      top: 15px;
+      left: -155px;
+    }
+  }
+  &-title {
+    font-size: 28px;
+    line-height: 1.35;
+    font-weight: 500;
+    width: 320px;
+    margin-right: 165px;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+    @include textDarkGradient;
+  }
+  &-text {
+    flex-grow: 1;
+    font-family: $circe;
+    font-size: 20px;
+    line-height: 1.45;
+    letter-spacing: 0.6px;
+    @include textDarkGradient;
+  }
+}

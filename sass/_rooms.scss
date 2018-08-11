@@ -39,6 +39,27 @@
       }
     }
   }
+  &-slider {
+    .flickity {
+      &-page-dots {
+        bottom: auto;
+        top: 330px;
+        left: calc(((100% - #{$container_width}) / 2) + #{$container_width - 155px});
+        width: auto;
+        @include sliderDots;
+      }
+      &-prev-next-button {
+        @include sliderArrows;
+        top: 335px;
+        &.previous {
+          left: calc(((100% - #{$container_width}) / 2) + #{$container_width - 452px});
+        }
+        &.next {
+          left: calc(((100% - #{$container_width}) / 2) + #{$container_width - 360px});
+        }
+      }
+    }
+  }
   &-title {
     position: absolute;
     top: 114px;

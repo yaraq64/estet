@@ -11,6 +11,7 @@
     <? include ('tpl/front-pluses.tpl') ?>
     <? include ('tpl/front-info-block.tpl') ?>
     <? include ('tpl/front-rooms.tpl') ?>
+    <? include ('tpl/front-form.tpl') ?>
     <? include ('tpl/footer.tpl') ?>
     <? include ('tpl/scripts.tpl') ?>
   </body>

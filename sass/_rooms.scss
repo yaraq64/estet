@@ -3,8 +3,6 @@
   &-slide {
     width: 100%;
     &-inner {
-      max-width: 1550px;
-      padding-right: 15px;
       display: flex;
     }
     &-image {
@@ -40,11 +38,13 @@
     }
   }
   &-slider {
+    max-width: 1550px;
+    padding-right: 15px;
     .flickity {
       &-page-dots {
         bottom: auto;
         top: 330px;
-        left: calc(((100% - #{$container_width}) / 2) + #{$container_width - 155px});
+        right: 50px;
         width: auto;
         @include sliderDots;
       }
@@ -52,10 +52,11 @@
         @include sliderArrows;
         top: 335px;
         &.previous {
-          left: calc(((100% - #{$container_width}) / 2) + #{$container_width - 452px});
+          left: auto;
+          right: 355px;
         }
         &.next {
-          left: calc(((100% - #{$container_width}) / 2) + #{$container_width - 360px});
+          right: 270px;
         }
       }
     }
@@ -65,13 +66,17 @@
     top: 114px;
     left: 0;
     width: 100%;
+    max-width: 1550px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: flex-end;
     z-index: 5;
     pointer-events: none;
     &-inner {
       display: flex;
       justify-content: flex-end;
       &-text {
-        max-width: 435px;
+        width: 435px;
         flex-grow: 1;
         font-size: 28px;
         line-height: 1.25;

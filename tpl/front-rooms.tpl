@@ -1,10 +1,8 @@
 <div class="rooms">
   <div class="rooms-title">
-    <div class="container">
-      <div class="rooms-title-inner">
-        <div class="rooms-title-inner-text">
-          Вот несколько историй <br />от людей, которые доверили <br />нам своё жильё.
-        </div>
+    <div class="rooms-title-inner">
+      <div class="rooms-title-inner-text">
+        Вот несколько историй <br />от людей, которые доверили <br />нам своё жильё.
       </div>
     </div>
   </div>

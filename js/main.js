@@ -8,6 +8,7 @@
 $(document).ready(function() {
   frontSlider();
   roomsSlider();
+  header();
 });
 
 
@@ -34,5 +35,22 @@ function roomsSlider() {
       wrapAround: true,
       imagesLoaded: true
     });
+  }
+}
+
+function header() {
+  var $header = $('.header');
+  checkOffset($header.offset().top);
+  $(window).on('scroll', function() {
+    let scrollValue = $(this).scrollTop();
+    checkOffset(scrollValue);
+  });
+  function checkOffset(offset) {
+    if (offset > 0) {
+      $header.addClass('header--fixed');
+    }
+    else {
+      $header.removeClass('header--fixed');
+    }
   }
 }

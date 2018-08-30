@@ -58,7 +58,7 @@
       margin-left: 26px;
       position: relative;
       top: -2px;
-      opacity: .9;
+      opacity: 0.9;
       -webkit-background-clip: initial;
       -webkit-text-fill-color: #61514e;
       transition: transform $duration, opacity $duration;
@@ -72,6 +72,35 @@
     &:active {
       .fas {
         transform: translate3d(7px, 0, 0);
+      }
+    }
+  }
+  &--submit {
+    width: 100%;
+    padding: 24px 32px 24px 40px;
+    justify-content: space-between;
+    border-color: rgba($brown, .32);
+    letter-spacing: 0.5px;
+    transition: background-color $duration, border-color $duration;
+    .btn-content {
+      @include textGradient;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 11px;
+      height: 17px;
+      background: url("../images/btn-main-arrow.png") no-repeat center;
+      transition: transform $duration;
+    }
+    &:hover {
+      border-color: rgba($brown, .75);
+      background-color: rgba($brown, .09);
+    }
+    &:active {
+      background-color: rgba($brown, .21);
+      &::after {
+        transform: translate3d(5px, 0, 0);
       }
     }
   }

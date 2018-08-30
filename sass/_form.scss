@@ -1,0 +1,123 @@
+.front-form {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 60px;
+  position: relative;
+  max-width: 1085px;
+  &::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: $brown;
+    position: absolute;
+    top: 15px;
+    left: -155px;
+  }
+  &-left {
+    flex-grow: 1;
+    max-width: 515px;
+    margin-right: 50px;
+  }
+  &-right {
+    flex-grow: 1;
+    max-width: 360px;
+  }
+  &-title {
+    font-size: 28px;
+    line-height: 1.35;
+    font-weight: 500;
+    margin: 0 0 33px;
+    letter-spacing: 0.5px;
+    @include textGradient;
+  }
+  &-text {
+    font-size: 13px;
+    line-height: 1.25;
+    color: $white;
+  }
+  &-contacts {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 62px;
+    &-label {
+      font-family: $circe;
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-right: 30px;
+      padding-bottom: 4px;
+      letter-spacing: 1px;
+      @include textGradient;
+    }
+    &-value {
+      font-size: 32px;
+      line-height: 1.15;
+      font-weight: 100;
+      color: $white;
+      a {
+        border-bottom: solid 1px transparent;
+        transition: border-color 0.4s;
+        &:hover {
+          border-color: rgba($white, .5);
+        }
+        &:active {
+          border-color: $white;
+        }
+      }
+    }
+  }
+}
+.form {
+  &-item {
+    margin: 0 0 15px;
+    overflow: hidden;
+  }
+  &-field {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: inherit;
+    font-family: $circe;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.25;
+    padding: 22px 40px;
+    border: solid 1px transparent;
+    overflow: hidden;
+    background-image: -moz-linear-gradient(0deg, rgba(238,216,205, .08) 0%, rgba(254,213,167, .08) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgba(238,216,205, .08) 0%, rgba(254,213,167, .08) 100%);
+    background-image: -ms-linear-gradient(0deg, rgba(238,216,205, .08) 0%, rgba(254,213,167, .08) 100%);
+    transition: background-color 0.4s;
+    &:hover {
+      background-color: rgba($white, .09);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: rgba($white, .21);
+    }
+    &::-webkit-input-placeholder {
+      color: inherit;
+      transition: opacity 0.4s;
+    }
+    &:focus::-webkit-input-placeholder {
+      opacity: 0;
+    }
+    &::-moz-placeholder {
+      color: inherit;
+      transition: opacity 0.4s;
+    }
+    &:focus::-moz-placeholder {
+      opacity: 0;
+    }
+    &:-moz-placeholder {
+      color: inherit;
+      transition: opacity 0.4s;
+    }
+    &:focus:-moz-placeholder {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  align-items: center;
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: $brown;
+    margin: 0 6px;
+    flex-shrink: 0;
+    font-size: 18px;
+    background-color: #23262c;
+    transition: background-color 0.4s, color 0.4s;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+    &:active {
+      color: $brownDark;
+    }
+  }
+}

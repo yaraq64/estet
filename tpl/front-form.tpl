@@ -20,7 +20,21 @@
         </div>
       </div>
       <div class="front-form-right">
-        
+        <form action="?" class="form">
+          <div class="form-item">
+            <input type="text" class="form-field" name="name" placeholder="Ваше имя" />
+          </div>
+          <div class="form-item">
+            <input type="text" class="form-field" name="phone" placeholder="Ваш телефон" />
+          </div>
+          <div class="form-action">
+            <button type="submit" class="btn btn--submit">
+              <div class="btn-content">
+                Оставить заявку
+              </div>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

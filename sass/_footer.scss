@@ -1,0 +1,35 @@
+.footer {
+  background-color: $dark;
+  color: $white;
+  padding: 35px 0;
+  font-family: $circe;
+  &-row {
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+  }
+  &-col {
+    padding: 0 15px;
+    flex-grow: 1;
+  }
+  &-copyright {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  &-phone {
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: bold;
+    @include textGradient;
+    a {
+      border-bottom: solid 1px transparent;
+      transition: border-color 0.4s;
+      &:hover {
+        border-color: rgba($brown, .5);
+      }
+      &:active {
+        border-color: $brown;
+      }
+    }
+  }
+}

@@ -7,7 +7,13 @@
   padding: 30px 0;
   color: $white;
   font-family: $circe;
-  background: url("../images/pattern-1.png") $dark repeat left top;
+  transition: background-color 0.4s;
+  &--fixed {
+    background-color: $dark;
+  }
+  .frontpage & {
+    background: url("../images/pattern-1.png") $dark repeat left top;
+  }
   &-content {
     display: flex;
     align-items: center;

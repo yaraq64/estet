@@ -3,7 +3,7 @@
   <head>
     <? include ('tpl/head.tpl') ?>
   </head>
-  <body>
+  <body class="frontpage">
     <? include ('tpl/header.tpl') ?>
     <? include ('tpl/front-promo.tpl') ?>
     <? include ('tpl/front-slider.tpl') ?>
@@ -12,6 +12,7 @@
     <? include ('tpl/front-info-block.tpl') ?>
     <? include ('tpl/front-rooms.tpl') ?>
     <? include ('tpl/front-form.tpl') ?>
+    <? include ('tpl/front-map.tpl') ?>
     <? include ('tpl/footer.tpl') ?>
     <? include ('tpl/scripts.tpl') ?>
   </body>

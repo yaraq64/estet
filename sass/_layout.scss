@@ -3,6 +3,9 @@
   max-width: $container_width;
   width: 100%;
   padding: 0 $cols_padding;
+  &--small {
+    max-width: 1030px + ($cols_padding * 2);
+  }
 }
 .section {
   color: #0c0d22;
@@ -10,6 +13,9 @@
   &--dark {
     background: url("../images/pattern-1.png") $dark repeat left top;
     color: #fff;
+  }
+  &--front-form {
+    padding: 140px 0;
   }
   &-title {
     font-size: 54px;
@@ -19,5 +25,38 @@
     &--center {
       text-align: center;
     }
+  }
+}
+.page {
+  &-promo {
+    padding-top: 142px;
+    padding-bottom: 60px;
+    color: $white;
+    background-color: $dark;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    &--portfolio {
+      background-image: url("../images/page-promo-portfolio-bg.jpg");
+    }
+    .section-title {
+      margin: 0;
+      padding-left: 75px;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 4px;
+        background-color: $brown;
+        position: absolute;
+        top: 32px;
+        left: -140px;
+      }
+    }
+  }
+  &-content {
+    padding: 62px 0;
+    background-color: $white;
   }
 }

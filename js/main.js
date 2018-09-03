@@ -8,6 +8,7 @@
 $(document).ready(function() {
   frontSlider();
   roomsSlider();
+  portfolioGallery();
   header();
 });
 
@@ -27,6 +28,19 @@ function frontSlider() {
 
 function roomsSlider() {
   let $slider = $('.rooms-slider');
+  if ($slider.length) {
+    $slider.flickity({
+      dragThreshold: 20,
+      cellAlign: 'left',
+      pageDots: true,
+      wrapAround: true,
+      imagesLoaded: true
+    });
+  }
+}
+
+function portfolioGallery() {
+  let $slider = $('.portfolio-gallery-slider');
   if ($slider.length) {
     $slider.flickity({
       dragThreshold: 20,

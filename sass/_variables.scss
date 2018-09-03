@@ -59,6 +59,7 @@ $mobile: 600px;
   margin: -25px 0 0;
   transform: none;
   background-color: transparent;
+  z-index: 5;
   transition: transform 0.4s;
   &::after,
   &::before {

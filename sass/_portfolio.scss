@@ -62,4 +62,99 @@
       opacity: 0.5;
     }
   }
+  &-promo {
+    padding: 105px 0;
+    background: url("../images/information-block-bg.jpg") lighten($brown, 15%) no-repeat center;
+    background-size: cover;
+    color: #23262c;
+    &-inner {
+      max-width: 1025px;
+      margin: 0 auto;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -20px;
+    }
+    &-left,
+    &-right {
+      width: 50%;
+      flex-grow: 1;
+      padding: 0 15px;
+    }
+    &-left {
+      display: flex;
+    }
+    &-right {
+      max-width: 505px;
+    }
+    &-param {
+      margin-right: 70px;
+      line-height: 1.25;
+      &:last-child {
+        margin-right: 0;
+      }
+      &-value {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        @include textDarkGradient;
+        sup {
+          font-size: 60%;
+          @include textDarkGradient;
+        }
+      }
+      &-label {
+        font-family: $circe;
+        font-size: 15px;
+        @include textDarkGradient;
+      }
+    }
+    &-text {
+      font-family: $circe;
+      font-size: 15px;
+      line-height: 1.39;
+      color: $brownDark;
+      p {
+        margin: 0 0 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &-gallery {
+    padding: 6px 3px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 17%;
+      width: 290px;
+      height: 85px;
+      background-color: $white;
+      z-index: 4;
+      box-shadow: 0 15px 28px 0 rgba(44, 47, 54, 0.18);
+    }
+    &-slider {
+      .flickity {
+        &-prev-next-button {
+          @include sliderArrows;
+          top: 17px;
+          &.previous {
+            left: 19.6%;
+          }
+          &.next {
+            right: auto;
+            left: 24.5%;
+          }
+        }
+      }
+    }
+    &-slide {
+      padding: 0 3px;
+    }
+  }
 }

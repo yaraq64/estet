@@ -8,8 +8,14 @@
   color: $white;
   font-family: $circe;
   transition: background-color 0.4s;
+  .path-contacts & {
+    position: absolute;
+  }
   &--fixed {
     background-color: $dark;
+    .path-contacts & {
+      background-color: transparent;
+    }
   }
   .frontpage & {
     background: url("../images/pattern-1.png") $dark repeat left top;
@@ -28,7 +34,7 @@
     &--nav {
       max-width: 420px;
       flex-grow: 1;
-      margin-right: 110px;
+      margin-right: 90px;
       padding-top: 4px;
     }
     &--contacts {
@@ -67,6 +73,9 @@
     transition: border-color 0.4s;
     font-weight: bold;
     @include textGradient;
+    .path-contacts & {
+      @include textDarkGradient;
+    }
     &:hover {
       border-color: rgba($brown, .65);
     }
@@ -80,6 +89,9 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    .path-contacts & {
+      color: $brownDark;
+    }
     &-item {
       padding: 0 15px;
       font-size: 15px;
@@ -88,10 +100,16 @@
         border-bottom: solid 1px transparent;
         transition: border-color 0.4s, color 0.4s;
         &:hover {
-          border-color: #fff;
+          border-color: $white;
+          .path-contacts & {
+            border-color: $brownDark;
+          }
         }
         &:active {
           color: $brown;
+          .path-contacts & {
+            border-color: $brown;
+          }
         }
       }
     }

@@ -1,7 +1,140 @@
 .front-map {
   &-frame {
+    display: block;
     border: 0;
     width: 100%;
     height: 660px;
+  }
+}
+.contacts {
+  &-page {
+    display: flex;
+    &-left {
+      background: url("../images/pattern-1.png") $dark repeat left top;
+      color: $white;
+      flex-shrink: 0;
+      padding: 145px 0 75px;
+      width: calc(((100% - #{$container_width}) / 2) + 495px);
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: -90px;
+      &-content {
+        flex-shrink: 0;
+        max-width: 475px;
+        flex-grow: 1;
+        padding: 0 50px 0 75px;
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          width: 70px;
+          height: 4px;
+          background-color: $brown;
+          position: absolute;
+          top: 32px;
+          left: -140px;
+        }
+        .section-title {
+          margin-bottom: 45px;
+        }
+      }
+    }
+    &-right {
+      padding: 145px 15px 110px;
+      width: $container_width - 495px;
+      &-content {
+        padding-left: 95px;
+        .section-title {
+          @include textDarkGradient;
+          margin-bottom: 45px;
+        }
+      }
+    }
+    &-label {
+      color: #f4d7bf;
+      font-size: 14px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    &-value {
+      font-size: 18px;
+      line-height: 1.35;
+      a {
+        border-bottom: solid 1px transparent;
+        transition: border-color 0.4s;
+        &:hover {
+          border-color: rgba($white, .5);
+        }
+        &:active {
+          border-color: $white;
+        }
+      }
+    }
+    &-form {
+      &-row {
+        display: flex;
+        margin: 0 -7px;
+      }
+      .form {
+        &-action,
+        &-item {
+          padding: 0 7px;
+        }
+        &-item {
+          flex-grow: 1;
+        }
+        &-action {
+          flex-shrink: 0;
+        }
+        &-field {
+          background-image: -moz-linear-gradient(0deg, #fcf4ea 0%, #fef0e0 100%);
+          background-image: -webkit-linear-gradient(0deg, #fcf4ea 0%, #fef0e0 100%);
+          background-image: linear-gradient(0deg, #fcf4ea 0%, #fef0e0 100%);
+          transition: opacity 0.4s, background-image 0.4s;
+          &:hover {
+            opacity: 0.6;
+          }
+          &:focus {
+            opacity: 1;
+          }
+        }
+        &-description {
+          text-align: right;
+          font-family: $circe;
+          font-size: 12px;
+          line-height: 1.25;
+          color: #333;
+          padding-top: 20px;
+          letter-spacing: 0.3px;
+          a {
+            border-bottom: solid 1px rgba(#333, .24);
+            transition: border-color 0.4s;
+            &:hover {
+              border-color: #333;
+            }
+            &:active {
+              border-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -19px -54px;
+  }
+  &-col {
+    width: 50%;
+    padding: 0 19px;
+    margin-bottom: 54px;
+    font-family: $circe;
+    letter-spacing: 0.5px;
+    &--full {
+      width: 100%;
+    }
   }
 }
